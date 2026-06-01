@@ -1,0 +1,66 @@
+{
+    "name": "blamodex/laravel-quo",
+    "description": "A Laravel wrapper for the Quo (OpenPhone) public API v1.",
+    "version": "1.0.0",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "quo",
+        "openphone",
+        "calls",
+        "telephony",
+        "api"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/blamodex/laravel-quo",
+    "support": {
+        "issues": "https://github.com/blamodex/laravel-quo/issues",
+        "source": "https://github.com/blamodex/laravel-quo"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blamodex\\Quo\\": "src/",
+            "Blamodex\\Quo\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "blackmage-codex",
+            "email": "admin@joelblodgett.ca"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0",
+        "illuminate/config": "^12.0",
+        "illuminate/http": "^12.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5.3",
+        "orchestra/testbench": "^10.0",
+        "squizlabs/php_codesniffer": "4.x-dev",
+        "phpunit/php-code-coverage": "*",
+        "larastan/larastan": "^3.0"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-html=tests/reports",
+        "lint": "phpcs --standard=.phpcs.xml src tests",
+        "lint:fix": "phpcbf --standard=.phpcs.xml src tests",
+        "analyze": "vendor/bin/phpstan analyse --memory-limit=256M",
+        "qa": [
+            "@test",
+            "@lint",
+            "@analyze"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blamodex\\Quo\\QuoServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
