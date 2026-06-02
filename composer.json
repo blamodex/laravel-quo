@@ -1,7 +1,6 @@
 {
     "name": "blamodex/laravel-quo",
     "description": "A Laravel wrapper for the Quo (OpenPhone) public API v1.",
-    "version": "1.0.0",
     "type": "library",
     "keywords": [
         "laravel",
@@ -19,7 +18,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Blamodex\\Quo\\": "src/",
+            "Blamodex\\Quo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Blamodex\\Quo\\Tests\\": "tests/"
         }
     },
@@ -38,8 +41,7 @@
     "require-dev": {
         "phpunit/phpunit": "^11.5.3",
         "orchestra/testbench": "^10.0",
-        "squizlabs/php_codesniffer": "4.x-dev",
-        "phpunit/php-code-coverage": "*",
+        "squizlabs/php_codesniffer": "^4.0",
         "larastan/larastan": "^3.0"
     },
     "scripts": {
@@ -47,7 +49,7 @@
         "test:coverage": "XDEBUG_MODE=coverage phpunit --coverage-html=tests/reports",
         "lint": "phpcs --standard=.phpcs.xml src tests",
         "lint:fix": "phpcbf --standard=.phpcs.xml src tests",
-        "analyze": "vendor/bin/phpstan analyse --memory-limit=256M",
+        "analyze": "phpstan analyse --memory-limit=256M",
         "qa": [
             "@test",
             "@lint",

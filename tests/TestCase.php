@@ -18,7 +18,7 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function defineEnvironment($app): void
     {
-        $app['config']->set('blamodex.quo.api_key', 'test-api-key');
-        $app['config']->set('blamodex.quo.base_url', 'https://api.openphone.com');
+        $app['config']->set('quo.api_key', 'test-api-key');
+        $app['config']->set('quo.base_url', 'https://api.openphone.com');
     }
 }

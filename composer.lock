@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92b3da005d4650d943abe6b345659f79",
+    "content-hash": "40b7e588bc40f6c754850143e63af95c",
     "packages": [
         {
             "name": "brick/math",
@@ -8770,16 +8770,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "4.x-dev",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "c3eb74d77233f73efb6c52b857356b12262370f0"
+                "reference": "0525c73950de35ded110cffafb9892946d7771b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/c3eb74d77233f73efb6c52b857356b12262370f0",
-                "reference": "c3eb74d77233f73efb6c52b857356b12262370f0",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/0525c73950de35ded110cffafb9892946d7771b5",
+                "reference": "0525c73950de35ded110cffafb9892946d7771b5",
                 "shasum": ""
             },
             "require": {
@@ -8791,11 +8791,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^8.4.0 || ^9.3.4 || ^10.5.32 || 11.3.3 - 11.5.28 || ^11.5.31"
             },
-            "suggest": {
-                "ext-iconv": "For accurate character length calculation when the checked files contain multi-byte characters.",
-                "ext-pcntl": "For parallel processing support via the --parallel CLI option."
-            },
-            "default-branch": true,
             "bin": [
                 "bin/phpcbf",
                 "bin/phpcs"
@@ -8850,7 +8845,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2026-04-06T01:04:56+00:00"
+            "time": "2025-11-10T16:43:36+00:00"
         },
         {
             "name": "staabm/side-effects-detector",
@@ -9033,9 +9028,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "squizlabs/php_codesniffer": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

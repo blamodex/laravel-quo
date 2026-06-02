@@ -21,9 +21,11 @@ readonly class CallData
         public ?string $completedAt,
         public ?string $answeredBy,
         public ?string $initiatedBy,
-        public int $duration,
+        public ?int $duration,
         public array $participants,
         public ?string $callRoute,
+        public ?string $forwardedFrom,
+        public ?string $forwardedTo,
         public ?string $aiHandled,
     ) {
     }
@@ -45,9 +47,11 @@ readonly class CallData
             completedAt: $data['completedAt'] ?? null,
             answeredBy: $data['answeredBy'] ?? null,
             initiatedBy: $data['initiatedBy'] ?? null,
-            duration: (int) ($data['duration'] ?? 0),
+            duration: isset($data['duration']) ? (int) $data['duration'] : null,
             participants: $data['participants'] ?? [],
             callRoute: $data['callRoute'] ?? null,
+            forwardedFrom: $data['forwardedFrom'] ?? null,
+            forwardedTo: $data['forwardedTo'] ?? null,
             aiHandled: $data['aiHandled'] ?? null,
         );
     }

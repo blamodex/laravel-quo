@@ -13,7 +13,7 @@ readonly class CallTranscriptData
         public string $callId,
         public string $status,
         public string $createdAt,
-        public float $duration,
+        public ?float $duration,
         public ?array $dialogue,
     ) {
     }
@@ -36,7 +36,7 @@ readonly class CallTranscriptData
             callId: $data['callId'],
             status: $data['status'],
             createdAt: $data['createdAt'],
-            duration: (float) ($data['duration'] ?? 0),
+            duration: isset($data['duration']) ? (float) $data['duration'] : null,
             dialogue: $dialogue,
         );
     }

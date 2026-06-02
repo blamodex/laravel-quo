@@ -11,12 +11,12 @@ class QuoServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/config/quo.php', 'blamodex.quo');
+        $this->mergeConfigFrom(__DIR__ . '/config/quo.php', 'quo');
 
         $this->app->singleton(QuoService::class, function ($app) {
             return new QuoService(
-                apiKey: config('blamodex.quo.api_key'),
-                baseUrl: config('blamodex.quo.base_url'),
+                apiKey: (string) config('quo.api_key', ''),
+                baseUrl: (string) config('quo.base_url', 'https://api.openphone.com'),
             );
         });
     }
